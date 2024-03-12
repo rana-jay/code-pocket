@@ -1,0 +1,21 @@
+<h1>
+    This is user profile ..
+</h1>
+
+<h4>
+    Name : {{name}}
+    <br>
+    Salary : {{salary}}
+</h4>
+
+<button [disabled]='isButtonDisabled'>
+    click me
+</button>
+
+
+<!-- two way data biding -->
+<h1>{{inputValue}}</h1>
+<input type="text" [value]="inputValue" (input)="onChange($event)">
+
+<h1>{{inputValue2}}</h1>
+<input type="text" [(ngModel)]="inputValue2">
