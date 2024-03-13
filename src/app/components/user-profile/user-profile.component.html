@@ -1,4 +1,4 @@
-<!-- <h1>
+<h1>
     This is user profile ..
 </h1>
 
@@ -19,8 +19,11 @@ two way data biding
 
 <h1>{{inputValue2}}</h1>
 <input type="text" [(ngModel)]="inputValue2">
+<br>
+<br>
 
 <div>
+    Iterating in loop using for 
     @for (user of users; track $index) {
         <h4>
             Name : {{user.name}} -- 
@@ -41,6 +44,7 @@ two way data biding
 
 <hr>
 
+Iterating in loop using ngFor
 <div *ngFor="let user of users">
     <h4>
         Name : {{user.name}} -- 
@@ -54,7 +58,7 @@ two way data biding
             ->intern
         </ng-template>
     </h4>
-</div> -->
+</div>
 
 <h2>
     Name - {{name}}
