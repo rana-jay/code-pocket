@@ -61,5 +61,9 @@
 <app-user-profile2 *ngFor="let u of users" [userName]="u.name" (myEvent)="recievedData($event)" (myEvent2)="recievedData2($event)">
 </app-user-profile2>
 
+<button (click)="clear()">
+  clear data
+</button>
+
 
 <!-- checking git commit  -->

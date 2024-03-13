@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core'
 })
 export class HighlightDirective {
   
-  constructor(private el:ElementRef) {
+  constructor(private el:ElementRef) {  // dependency injection 
     
    }
 
@@ -24,4 +24,5 @@ export class HighlightDirective {
     console.log("mouse leave");
     this.el.nativeElement.style.fontSize = "30px";
   }
+  
 }

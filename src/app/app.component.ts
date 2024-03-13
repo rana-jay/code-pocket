@@ -41,4 +41,9 @@ recievedData2(e:User){
   const userIndex = this.users.findIndex(u=>u.name == e.name);
   console.log(userIndex);
 };
+
+clear(){
+  this.users =[];
+  console.log("clearning")
+}
 }
