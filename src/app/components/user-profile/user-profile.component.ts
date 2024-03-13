@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CounrtyCodePipe } from '../../pipes/counrty-code.pipe';
 
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule,CommonModule], // here need to add module for use example 
+  imports: [FormsModule,CommonModule,CounrtyCodePipe], // here need to add module for use example 
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
@@ -15,6 +16,8 @@ export class UserProfileComponent {
 
   name = "Rana jay";
   salary = 1000000 ;
+  mobileNo = 9104102578;
+
   isButtonDisabled = false;
   inputValue = "test";
   inputValue2 = "test2";

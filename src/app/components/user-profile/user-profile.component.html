@@ -3,11 +3,19 @@
 </h1>
 
 <h4>
-    Name : {{name}}
+    Name : {{name | uppercase}}  <!--   | use for pipe and titlecase is default type . .-->
     <br>
-    Salary : {{salary}}
+    Salary : {{salary | currency:"INR"}}
+    <br>
+    Mobile Number : {{mobileNo}} (without pipe)
+    <br>
+    Mobile Number : {{mobileNo | counrtyCode }} (with pipe)
+    <br>
+    Mobile Number : {{mobileNo | counrtyCode:"USA" }} (with argument)
 </h4>
 <!-- this is interpolation  -->
+
+<!-- ng g p <pipename> -->
 
 
 <button [disabled]='isButtonDisabled' (click)="onClick2()">
@@ -31,8 +39,8 @@ look in console
     Iterating in loop using for 
     @for (user of users; track $index) {
         <h4>
-            Name : {{user.name}} -- 
-            Salary : {{user.salary}}
+            Name : {{user.name | titlecase}} -- 
+            Salary : {{user.salary | currency}}
             {{$index}}
 
             @if(user.salary > 200000){
