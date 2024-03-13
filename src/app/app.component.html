@@ -5,17 +5,61 @@
 
 <!-- adding components  tag  -->
 
-<app-user-profile userName="jay">
+<app-user-profile>
 
 </app-user-profile>
 
-<app-user-profile userName="manthan">
+
+<hr>
+<hr>
+
+
+
+
+<h2><u>Parent to child Data ..</u></h2>
+
+<div>
+  Iterating in loop using for 
+  @for (user of users; track $index) {
+    <p>Yeah : loop is working </p>
+    <app-user-profile2 userName={{user.name}}>
   
-</app-user-profile>
+    </app-user-profile2>
+  }
+</div>
 
-<app-user-profile userName="animesh">
-  
-</app-user-profile>
+<hr>
+<hr>
+
+<app-user-profile2 *ngFor="let u of users" [userName]="u.name" >
+</app-user-profile2>
+
+<hr>
+<hr>
+
+<app-inlinehtmltrial>
+
+</app-inlinehtmltrial>
+
+<hr>
+<hr>
+
+<app-inlinestyletrial>
+
+</app-inlinestyletrial>
+
+<hr>
+<hr>
+
+
+
+<h1>
+  <u>
+    child to parent data 
+  </u>
+</h1>
+<app-user-profile2 *ngFor="let u of users" [userName]="u.name" (myEvent)="recievedData($event)" (myEvent2)="recievedData2($event)">
+</app-user-profile2>
 
 
 <!-- checking git commit  -->

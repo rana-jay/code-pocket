@@ -2,9 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-function formateName(value:string){
-  return "hi " + value ; 
-}
 
 @Component({
   selector: 'app-user-profile',
@@ -16,17 +13,12 @@ function formateName(value:string){
 
 export class UserProfileComponent {
 
-  // for taking input
-  // transform function used to transform input data 
-  // alias use to  take another variable name rather than input name 
-
-  @Input({alias:'userName',transform:formateName}) name  = " ";
-
-  // name = "Rana jay";
+  name = "Rana jay";
   salary = 1000000 ;
   isButtonDisabled = false;
   inputValue = "test";
   inputValue2 = "test2";
+  btnData = "click me for disable me :"
 
   users = [
     {
@@ -43,10 +35,16 @@ export class UserProfileComponent {
     }
   ]
 
+  // on event change 
   onChange(e:Event){
     const value = (e.target as HTMLInputElement).value ;
     this.inputValue = value;
     console.log(value);
+  }
+
+  onClick2(){
+    this.isButtonDisabled = true;
+    this.btnData = "Refesh for agin button " ;
   }
 
 }

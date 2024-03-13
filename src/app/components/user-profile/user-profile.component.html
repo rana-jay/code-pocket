@@ -7,17 +7,22 @@
     <br>
     Salary : {{salary}}
 </h4>
+<!-- this is interpolation  -->
 
-<button [disabled]='isButtonDisabled'>
-    click me
+
+<button [disabled]='isButtonDisabled' (click)="onClick2()">
+    {{btnData }} 
 </button>
+<br>
 
 
 two way data biding
+look in console
 <h1>{{inputValue}}</h1>
 <input type="text" [value]="inputValue" (input)="onChange($event)">
 
 <h1>{{inputValue2}}</h1>
+<!-- ngmodel is used for direct data biding  -->
 <input type="text" [(ngModel)]="inputValue2">
 <br>
 <br>
@@ -37,8 +42,6 @@ two way data biding
                 ->  intern 
             }
         </h4>
-
-        
     }
 </div>
 
@@ -60,6 +63,3 @@ Iterating in loop using ngFor
     </h4>
 </div>
 
-<h2>
-    Name - {{name}}
-</h2>
