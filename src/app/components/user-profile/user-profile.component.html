@@ -1,4 +1,4 @@
-<h1>
+<!-- <h1>
     This is user profile ..
 </h1>
 
@@ -13,9 +13,49 @@
 </button>
 
 
-<!-- two way data biding -->
+two way data biding
 <h1>{{inputValue}}</h1>
 <input type="text" [value]="inputValue" (input)="onChange($event)">
 
 <h1>{{inputValue2}}</h1>
 <input type="text" [(ngModel)]="inputValue2">
+
+<div>
+    @for (user of users; track $index) {
+        <h4>
+            Name : {{user.name}} -- 
+            Salary : {{user.salary}}
+            {{$index}}
+
+            @if(user.salary > 200000){
+                ->  employeee
+            }
+            @else {
+                ->  intern 
+            }
+        </h4>
+
+        
+    }
+</div>
+
+<hr>
+
+<div *ngFor="let user of users">
+    <h4>
+        Name : {{user.name}} -- 
+        Salary : {{user.salary}}
+
+        
+        <p *ngIf="user.salary > 200000; else elseBlock" >
+            ->  employeee
+        </p>
+        <ng-template #elseBlock>
+            ->intern
+        </ng-template>
+    </h4>
+</div> -->
+
+<h2>
+    Name - {{name}}
+</h2>
