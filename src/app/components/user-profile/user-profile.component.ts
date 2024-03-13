@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CounrtyCodePipe } from '../../pipes/counrty-code.pipe';
+import { HighlightDirective } from '../../directives/highlight.directive';
 
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule,CommonModule,CounrtyCodePipe], // here need to add module for use example 
+  imports: [FormsModule,CommonModule,CounrtyCodePipe,HighlightDirective], // here need to add module for use example 
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css'
 })
